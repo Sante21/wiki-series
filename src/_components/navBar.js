@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function NavBar() {
     return (
-        <nav>
+        <nav className="flex items-center justify-between border-b-1 border-white/[.15] p-5">
             <div>
                 <Image
                     className="dark:invert"
@@ -14,12 +14,12 @@ export default function NavBar() {
                     priority
                 />
             </div>
-            <ul>
+            <ul className="flex gap-6 text-xl">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/series">Series</a></li>
                 <li><a href="#">Sobre nosotros</a></li>
             </ul>
-            <div class="redes">
+            <div className="flex gap-2">
                 <Image
                     aria-hidden
                     src="/file.svg"

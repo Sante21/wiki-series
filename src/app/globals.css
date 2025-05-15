@@ -19,24 +19,6 @@
   }
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.158);
-  padding: 5mm;
-}
-
-ul {
-  display: flex;
-  gap: 5mm;
-}
-
-.redes {
-  display: flex;
-  gap: 2mm;
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
