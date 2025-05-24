@@ -5,9 +5,8 @@ export default function NavBar() {
         <nav className="flex items-center justify-between border-b-1 border-white/[.15] p-5">
             <div>
                 <Image
-                    className="dark:invert"
-                    src="/next.svg"
-                    alt="Next.js logo"
+                    src="/logo.png"
+                    alt="Iker.st logo"
                     href="/"
                     width={180}
                     height={38}
@@ -22,21 +21,21 @@ export default function NavBar() {
             <div className="flex gap-2">
                 <Image
                     aria-hidden
-                    src="/file.svg"
+                    src="/instagram.png"
                     alt="File icon"
                     width={16}
                     height={16}
                 />
                 <Image
                     aria-hidden
-                    src="/window.svg"
+                    src="/x.png"
                     alt="Window icon"
                     width={16}
                     height={16}
                 />
                 <Image
                     aria-hidden
-                    src="/globe.svg"
+                    src="/tiktok.png"
                     alt="Globe icon"
                     width={16}
                     height={16}

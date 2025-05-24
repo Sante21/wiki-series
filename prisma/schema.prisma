@@ -16,10 +16,27 @@ datasource db {
 
 model User {
 	id    Int    @id @default(autoincrement()) //id
-	name  String @db.VarChar(100) //Crea strings de tipo
-	 varchar(100)
+	name  String @db.VarChar(100) //Crea strings de tipo varchar(100)
 	email String @unique //declara un valor unico
 	age   Int   //declara un numero
 	createdAt DateTime @default(now()) //declara la columna de creacion
 	updatedAt DateTime @updatedAt //declara la columna de actualizacion
 }
+
+model Series {
+  id        Int    @id @default(autoincrement())
+  title     String
+  description  String
+  imageUrl  String
+  characters  Character[]
+}
+
+model Character {
+  id          Int     @id @default(autoincrement())
+  name        String
+  image       String
+  description String
+  seriesId    Int
+  series      Series  @relation(fields: [seriesId], references: [id])
+}
+
