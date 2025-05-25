@@ -1,4 +1,5 @@
 import prisma from '@/lib/prisma'
+import { redirect } from 'next/dist/server/api-utils';
 
 export default function CreateSerieForm() {
     async function CreateSerie(formData) {
@@ -17,7 +18,7 @@ export default function CreateSerieForm() {
                 <textarea name='description' placeholder='Serie description' className='border p-1 rounded'></textarea>
 
                 <select name="imageUrl" className='border p-1 rounded'>
-                    <option value="" selected disabled>Choose a serie image</option>
+                    <option value="" selected disabled defaultValue={''}>Choose a serie image</option>
                     <option value="/series/twd.jpg" className='text-gray-950'>The Walking Dead</option>
                     <option value="/series/breakingbad.jpg" className='text-gray-950'>Breaking Bad</option>
                     <option value="/series/shameless.jpg" className='text-gray-950'>Shameless</option>

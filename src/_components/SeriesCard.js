@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import DeleteSerieForm from "./DeleteSerieForm";
 
 const SeriesCard = ({ serie }) => {
     if (!serie) return null
@@ -15,6 +16,7 @@ const SeriesCard = ({ serie }) => {
                 height={375}
             />
             <h2 className="text-xl">{serie.title}</h2>
+            <DeleteSerieForm serieId={serie.id} />
             <Link href={`/series/${serie.id}`} className="border p-2 pr-4 pl-4 rounded-lg"> More info </Link>
         </div>
     );
