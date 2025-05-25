@@ -3168,7 +3168,7 @@ export namespace Prisma {
     image?: boolean
     description?: boolean
     seriesId?: boolean
-    series?: boolean | SeriesDefaultArgs<ExtArgs>
+    serie?: boolean | SeriesDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["character"]>
 
 
@@ -3183,13 +3183,13 @@ export namespace Prisma {
 
   export type CharacterOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "image" | "description" | "seriesId", ExtArgs["result"]["character"]>
   export type CharacterInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    series?: boolean | SeriesDefaultArgs<ExtArgs>
+    serie?: boolean | SeriesDefaultArgs<ExtArgs>
   }
 
   export type $CharacterPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Character"
     objects: {
-      series: Prisma.$SeriesPayload<ExtArgs>
+      serie: Prisma.$SeriesPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -3537,7 +3537,7 @@ export namespace Prisma {
    */
   export interface Prisma__CharacterClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    series<T extends SeriesDefaultArgs<ExtArgs> = {}>(args?: Subset<T, SeriesDefaultArgs<ExtArgs>>): Prisma__SeriesClient<$Result.GetResult<Prisma.$SeriesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    serie<T extends SeriesDefaultArgs<ExtArgs> = {}>(args?: Subset<T, SeriesDefaultArgs<ExtArgs>>): Prisma__SeriesClient<$Result.GetResult<Prisma.$SeriesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4172,7 +4172,7 @@ export namespace Prisma {
     image?: StringFilter<"Character"> | string
     description?: StringFilter<"Character"> | string
     seriesId?: IntFilter<"Character"> | number
-    series?: XOR<SeriesScalarRelationFilter, SeriesWhereInput>
+    serie?: XOR<SeriesScalarRelationFilter, SeriesWhereInput>
   }
 
   export type CharacterOrderByWithRelationInput = {
@@ -4181,7 +4181,7 @@ export namespace Prisma {
     image?: SortOrder
     description?: SortOrder
     seriesId?: SortOrder
-    series?: SeriesOrderByWithRelationInput
+    serie?: SeriesOrderByWithRelationInput
     _relevance?: CharacterOrderByRelevanceInput
   }
 
@@ -4194,7 +4194,7 @@ export namespace Prisma {
     image?: StringFilter<"Character"> | string
     description?: StringFilter<"Character"> | string
     seriesId?: IntFilter<"Character"> | number
-    series?: XOR<SeriesScalarRelationFilter, SeriesWhereInput>
+    serie?: XOR<SeriesScalarRelationFilter, SeriesWhereInput>
   }, "id">
 
   export type CharacterOrderByWithAggregationInput = {
@@ -4285,7 +4285,7 @@ export namespace Prisma {
     title: string
     description: string
     imageUrl: string
-    characters?: CharacterCreateNestedManyWithoutSeriesInput
+    characters?: CharacterCreateNestedManyWithoutSerieInput
   }
 
   export type SeriesUncheckedCreateInput = {
@@ -4293,14 +4293,14 @@ export namespace Prisma {
     title: string
     description: string
     imageUrl: string
-    characters?: CharacterUncheckedCreateNestedManyWithoutSeriesInput
+    characters?: CharacterUncheckedCreateNestedManyWithoutSerieInput
   }
 
   export type SeriesUpdateInput = {
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     imageUrl?: StringFieldUpdateOperationsInput | string
-    characters?: CharacterUpdateManyWithoutSeriesNestedInput
+    characters?: CharacterUpdateManyWithoutSerieNestedInput
   }
 
   export type SeriesUncheckedUpdateInput = {
@@ -4308,7 +4308,7 @@ export namespace Prisma {
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     imageUrl?: StringFieldUpdateOperationsInput | string
-    characters?: CharacterUncheckedUpdateManyWithoutSeriesNestedInput
+    characters?: CharacterUncheckedUpdateManyWithoutSerieNestedInput
   }
 
   export type SeriesCreateManyInput = {
@@ -4335,7 +4335,7 @@ export namespace Prisma {
     name: string
     image: string
     description: string
-    series: SeriesCreateNestedOneWithoutCharactersInput
+    serie: SeriesCreateNestedOneWithoutCharactersInput
   }
 
   export type CharacterUncheckedCreateInput = {
@@ -4350,7 +4350,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     image?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    series?: SeriesUpdateOneRequiredWithoutCharactersNestedInput
+    serie?: SeriesUpdateOneRequiredWithoutCharactersNestedInput
   }
 
   export type CharacterUncheckedUpdateInput = {
@@ -4617,45 +4617,45 @@ export namespace Prisma {
     set?: Date | string
   }
 
-  export type CharacterCreateNestedManyWithoutSeriesInput = {
-    create?: XOR<CharacterCreateWithoutSeriesInput, CharacterUncheckedCreateWithoutSeriesInput> | CharacterCreateWithoutSeriesInput[] | CharacterUncheckedCreateWithoutSeriesInput[]
-    connectOrCreate?: CharacterCreateOrConnectWithoutSeriesInput | CharacterCreateOrConnectWithoutSeriesInput[]
-    createMany?: CharacterCreateManySeriesInputEnvelope
+  export type CharacterCreateNestedManyWithoutSerieInput = {
+    create?: XOR<CharacterCreateWithoutSerieInput, CharacterUncheckedCreateWithoutSerieInput> | CharacterCreateWithoutSerieInput[] | CharacterUncheckedCreateWithoutSerieInput[]
+    connectOrCreate?: CharacterCreateOrConnectWithoutSerieInput | CharacterCreateOrConnectWithoutSerieInput[]
+    createMany?: CharacterCreateManySerieInputEnvelope
     connect?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
   }
 
-  export type CharacterUncheckedCreateNestedManyWithoutSeriesInput = {
-    create?: XOR<CharacterCreateWithoutSeriesInput, CharacterUncheckedCreateWithoutSeriesInput> | CharacterCreateWithoutSeriesInput[] | CharacterUncheckedCreateWithoutSeriesInput[]
-    connectOrCreate?: CharacterCreateOrConnectWithoutSeriesInput | CharacterCreateOrConnectWithoutSeriesInput[]
-    createMany?: CharacterCreateManySeriesInputEnvelope
+  export type CharacterUncheckedCreateNestedManyWithoutSerieInput = {
+    create?: XOR<CharacterCreateWithoutSerieInput, CharacterUncheckedCreateWithoutSerieInput> | CharacterCreateWithoutSerieInput[] | CharacterUncheckedCreateWithoutSerieInput[]
+    connectOrCreate?: CharacterCreateOrConnectWithoutSerieInput | CharacterCreateOrConnectWithoutSerieInput[]
+    createMany?: CharacterCreateManySerieInputEnvelope
     connect?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
   }
 
-  export type CharacterUpdateManyWithoutSeriesNestedInput = {
-    create?: XOR<CharacterCreateWithoutSeriesInput, CharacterUncheckedCreateWithoutSeriesInput> | CharacterCreateWithoutSeriesInput[] | CharacterUncheckedCreateWithoutSeriesInput[]
-    connectOrCreate?: CharacterCreateOrConnectWithoutSeriesInput | CharacterCreateOrConnectWithoutSeriesInput[]
-    upsert?: CharacterUpsertWithWhereUniqueWithoutSeriesInput | CharacterUpsertWithWhereUniqueWithoutSeriesInput[]
-    createMany?: CharacterCreateManySeriesInputEnvelope
+  export type CharacterUpdateManyWithoutSerieNestedInput = {
+    create?: XOR<CharacterCreateWithoutSerieInput, CharacterUncheckedCreateWithoutSerieInput> | CharacterCreateWithoutSerieInput[] | CharacterUncheckedCreateWithoutSerieInput[]
+    connectOrCreate?: CharacterCreateOrConnectWithoutSerieInput | CharacterCreateOrConnectWithoutSerieInput[]
+    upsert?: CharacterUpsertWithWhereUniqueWithoutSerieInput | CharacterUpsertWithWhereUniqueWithoutSerieInput[]
+    createMany?: CharacterCreateManySerieInputEnvelope
     set?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
     disconnect?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
     delete?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
     connect?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
-    update?: CharacterUpdateWithWhereUniqueWithoutSeriesInput | CharacterUpdateWithWhereUniqueWithoutSeriesInput[]
-    updateMany?: CharacterUpdateManyWithWhereWithoutSeriesInput | CharacterUpdateManyWithWhereWithoutSeriesInput[]
+    update?: CharacterUpdateWithWhereUniqueWithoutSerieInput | CharacterUpdateWithWhereUniqueWithoutSerieInput[]
+    updateMany?: CharacterUpdateManyWithWhereWithoutSerieInput | CharacterUpdateManyWithWhereWithoutSerieInput[]
     deleteMany?: CharacterScalarWhereInput | CharacterScalarWhereInput[]
   }
 
-  export type CharacterUncheckedUpdateManyWithoutSeriesNestedInput = {
-    create?: XOR<CharacterCreateWithoutSeriesInput, CharacterUncheckedCreateWithoutSeriesInput> | CharacterCreateWithoutSeriesInput[] | CharacterUncheckedCreateWithoutSeriesInput[]
-    connectOrCreate?: CharacterCreateOrConnectWithoutSeriesInput | CharacterCreateOrConnectWithoutSeriesInput[]
-    upsert?: CharacterUpsertWithWhereUniqueWithoutSeriesInput | CharacterUpsertWithWhereUniqueWithoutSeriesInput[]
-    createMany?: CharacterCreateManySeriesInputEnvelope
+  export type CharacterUncheckedUpdateManyWithoutSerieNestedInput = {
+    create?: XOR<CharacterCreateWithoutSerieInput, CharacterUncheckedCreateWithoutSerieInput> | CharacterCreateWithoutSerieInput[] | CharacterUncheckedCreateWithoutSerieInput[]
+    connectOrCreate?: CharacterCreateOrConnectWithoutSerieInput | CharacterCreateOrConnectWithoutSerieInput[]
+    upsert?: CharacterUpsertWithWhereUniqueWithoutSerieInput | CharacterUpsertWithWhereUniqueWithoutSerieInput[]
+    createMany?: CharacterCreateManySerieInputEnvelope
     set?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
     disconnect?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
     delete?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
     connect?: CharacterWhereUniqueInput | CharacterWhereUniqueInput[]
-    update?: CharacterUpdateWithWhereUniqueWithoutSeriesInput | CharacterUpdateWithWhereUniqueWithoutSeriesInput[]
-    updateMany?: CharacterUpdateManyWithWhereWithoutSeriesInput | CharacterUpdateManyWithWhereWithoutSeriesInput[]
+    update?: CharacterUpdateWithWhereUniqueWithoutSerieInput | CharacterUpdateWithWhereUniqueWithoutSerieInput[]
+    updateMany?: CharacterUpdateManyWithWhereWithoutSerieInput | CharacterUpdateManyWithWhereWithoutSerieInput[]
     deleteMany?: CharacterScalarWhereInput | CharacterScalarWhereInput[]
   }
 
@@ -4769,43 +4769,43 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type CharacterCreateWithoutSeriesInput = {
+  export type CharacterCreateWithoutSerieInput = {
     name: string
     image: string
     description: string
   }
 
-  export type CharacterUncheckedCreateWithoutSeriesInput = {
+  export type CharacterUncheckedCreateWithoutSerieInput = {
     id?: number
     name: string
     image: string
     description: string
   }
 
-  export type CharacterCreateOrConnectWithoutSeriesInput = {
+  export type CharacterCreateOrConnectWithoutSerieInput = {
     where: CharacterWhereUniqueInput
-    create: XOR<CharacterCreateWithoutSeriesInput, CharacterUncheckedCreateWithoutSeriesInput>
+    create: XOR<CharacterCreateWithoutSerieInput, CharacterUncheckedCreateWithoutSerieInput>
   }
 
-  export type CharacterCreateManySeriesInputEnvelope = {
-    data: CharacterCreateManySeriesInput | CharacterCreateManySeriesInput[]
+  export type CharacterCreateManySerieInputEnvelope = {
+    data: CharacterCreateManySerieInput | CharacterCreateManySerieInput[]
     skipDuplicates?: boolean
   }
 
-  export type CharacterUpsertWithWhereUniqueWithoutSeriesInput = {
+  export type CharacterUpsertWithWhereUniqueWithoutSerieInput = {
     where: CharacterWhereUniqueInput
-    update: XOR<CharacterUpdateWithoutSeriesInput, CharacterUncheckedUpdateWithoutSeriesInput>
-    create: XOR<CharacterCreateWithoutSeriesInput, CharacterUncheckedCreateWithoutSeriesInput>
+    update: XOR<CharacterUpdateWithoutSerieInput, CharacterUncheckedUpdateWithoutSerieInput>
+    create: XOR<CharacterCreateWithoutSerieInput, CharacterUncheckedCreateWithoutSerieInput>
   }
 
-  export type CharacterUpdateWithWhereUniqueWithoutSeriesInput = {
+  export type CharacterUpdateWithWhereUniqueWithoutSerieInput = {
     where: CharacterWhereUniqueInput
-    data: XOR<CharacterUpdateWithoutSeriesInput, CharacterUncheckedUpdateWithoutSeriesInput>
+    data: XOR<CharacterUpdateWithoutSerieInput, CharacterUncheckedUpdateWithoutSerieInput>
   }
 
-  export type CharacterUpdateManyWithWhereWithoutSeriesInput = {
+  export type CharacterUpdateManyWithWhereWithoutSerieInput = {
     where: CharacterScalarWhereInput
-    data: XOR<CharacterUpdateManyMutationInput, CharacterUncheckedUpdateManyWithoutSeriesInput>
+    data: XOR<CharacterUpdateManyMutationInput, CharacterUncheckedUpdateManyWithoutSerieInput>
   }
 
   export type CharacterScalarWhereInput = {
@@ -4861,27 +4861,27 @@ export namespace Prisma {
     imageUrl?: StringFieldUpdateOperationsInput | string
   }
 
-  export type CharacterCreateManySeriesInput = {
+  export type CharacterCreateManySerieInput = {
     id?: number
     name: string
     image: string
     description: string
   }
 
-  export type CharacterUpdateWithoutSeriesInput = {
+  export type CharacterUpdateWithoutSerieInput = {
     name?: StringFieldUpdateOperationsInput | string
     image?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
   }
 
-  export type CharacterUncheckedUpdateWithoutSeriesInput = {
+  export type CharacterUncheckedUpdateWithoutSerieInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     image?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
   }
 
-  export type CharacterUncheckedUpdateManyWithoutSeriesInput = {
+  export type CharacterUncheckedUpdateManyWithoutSerieInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     image?: StringFieldUpdateOperationsInput | string

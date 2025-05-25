@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link'
+import DeleteCharForm from "./DeleteCharForm";
 
 export default function CharacterCard({ character }) {
     return (
@@ -13,6 +14,7 @@ export default function CharacterCard({ character }) {
                 height={152}
             />
             <h2 className="text-xl mt-3 mb-5">{character.name}</h2>
+            <DeleteCharForm charId={character.id} />
             <Link href={`/series/${character.seriesId}/characters/${character.id}`} className="border p-2 pr-4 pl-4 rounded-lg mt-5"> Learn more </Link>
         </div>
     )

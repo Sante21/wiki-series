@@ -1,10 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import prisma from '@/lib/prisma';
 import CharacterCard from "@/_components/CharacterCard";
 import CreateCharForm from "@/_components/CreateCharForm";
 import UpdateSerieForm from "@/_components/UpdateSerieForm";
-// import CharacterCard from '@/components/CharacterCard';
 
 export default async function SeriesDetail({ params }) {
     const serie = await prisma.series.findUnique({
@@ -40,7 +37,7 @@ export default async function SeriesDetail({ params }) {
             </main>
 
             <div className="flex justify-evenly gap-5 mt-15 w-full">
-                <CreateCharForm />
+                <CreateCharForm seriesId={serie.id}/>
                 <UpdateSerieForm serie={serie}/>
 
             </div>

@@ -36,7 +36,7 @@ model Character {
   name        String
   image       String
   description String
+  serie       Series  @relation(fields: [seriesId], references: [id])
   seriesId    Int
-  series      Series  @relation(fields: [seriesId], references: [id])
 }
 

@@ -12,14 +12,13 @@ export default function UpdateUserForm({ serie }) {
         await updateSerie(serie.id, formData)
     }
 
-
     return (
         <div>
             <h1 className='text-2xl'>Update serie</h1>
             <form action={handleSubmit} className='flex flex-col items-start gap-5 mt-3'>
 
-                <input type='text' name='title' value={title} onChange={(e) => setTitle(e.target.value)} required className='border p-1 rounded' />
-                <textarea name='description' value={description} onChange={(e) => setDescription(e.target.value)} className='border p-1 rounded'></textarea>
+                <input type='text' name='title' placeholder='Serie title' value={title} onChange={(e) => setTitle(e.target.value)} required className='border p-1 rounded' />
+                <textarea name='description' placeholder='Serie descrip`tion' value={description} onChange={(e) => setDescription(e.target.value)} className='border p-1 rounded'></textarea>
                 <select name="imageUrl" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} className='border p-1 rounded' required>
                     <option value="" disabled>Choose a serie image</option>
                     <option value="/series/twd.jpg" className='text-gray-950'>The Walking Dead</option>
@@ -34,7 +33,7 @@ export default function UpdateUserForm({ serie }) {
                     <option value="/series/stranger-things.jpg" className='text-gray-950'>Stranger Things</option>
                 </select>
 
-                <button type='submit' className='text-indigo-50 border border-indigo-600 rounded-lg p-2 cursor-pointer'>Update serie</button>
+                <button type='submit' className='text-indigo-50 border border-amber-500 rounded-lg p-2 cursor-pointer'>Update serie</button>
             </form>
         </div>
     );

@@ -18,7 +18,7 @@ export default function CreateSerieForm() {
                 <textarea name='description' placeholder='Serie description' className='border p-1 rounded'></textarea>
 
                 <select name="imageUrl" className='border p-1 rounded'>
-                    <option value="" selected disabled defaultValue={''}>Choose a serie image</option>
+                    <option value="" disabled defaultValue={''}>Choose a serie image</option>
                     <option value="/series/twd.jpg" className='text-gray-950'>The Walking Dead</option>
                     <option value="/series/breakingbad.jpg" className='text-gray-950'>Breaking Bad</option>
                     <option value="/series/shameless.jpg" className='text-gray-950'>Shameless</option>
@@ -31,7 +31,7 @@ export default function CreateSerieForm() {
                     <option value="/series/stranger-things.jpg" className='text-gray-950'>Stranger Things</option>
                 </select>
 
-                <button type='submit' className='text-indigo-50 border border-indigo-600 rounded-lg p-2 cursor-pointer'>Create serie</button>
+                <button type='submit' className='text-indigo-50 border border-amber-500 rounded-lg p-2 cursor-pointer'>Create serie</button>
             </form>
         </div>
     );

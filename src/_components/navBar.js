@@ -16,7 +16,7 @@ export default function NavBar() {
             <ul className="flex gap-6 text-xl">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/series">Series</a></li>
-                <li><a href="#">Sobre nosotros</a></li>
+                {/* <li><a href="#">Sobre nosotros</a></li> */}
             </ul>
             <div className="flex gap-2">
                 <Image
